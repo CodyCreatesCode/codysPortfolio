@@ -3284,6 +3284,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
+		height: 100vh;
 		color: #ffffff;
 		padding: 8rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
@@ -3301,7 +3302,7 @@ input, select, textarea {
 		-moz-justify-content: -moz-flex-end;
 		-webkit-justify-content: -webkit-flex-end;
 		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
+		justify-content: center;
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3605,12 +3606,13 @@ input, select, textarea {
 
 /* Nav */
 
-	#nav {
+#nav {
 		color: #ffffff;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		visibility: hidden;
 		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
 		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
@@ -3754,7 +3756,6 @@ input, select, textarea {
 		}
 
 /* Main */
-
 	#main {
 		background-color: #ffffff;
 		position: relative;
@@ -4485,7 +4486,7 @@ input, select, textarea {
 
 /* Nav Panel */
 
-	#navPanelToggle {
+#navPanelToggle {
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -4498,7 +4499,7 @@ input, select, textarea {
 		border: 0;
 		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 1.7rem;
+		font-size: 2rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
 		padding: 0.375rem 1.25rem;
@@ -4545,7 +4546,6 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#navPanelToggle {
-				font-size: 1.7rem;
 				padding: 0.25rem 1rem;
 			}
 

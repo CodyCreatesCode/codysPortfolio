@@ -4,10 +4,18 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+window.onbeforeunload = function () {
+    if(window.scrollTo) window.scrollTo(0,0);
+	if(history && history.scrollRestoration) history.scrollRestoration = "manual";
+
+};
+
+
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body'),
+		$intro = $('#intro'),
 		$wrapper = $('#wrapper'),
 		$header = $('#header'),
 		$nav = $('#nav'),
@@ -132,8 +140,8 @@
 				.appendTo($wrapper);
 
 			// Change toggle styling once we've scrolled past the header.
-				$header.scrollex({
-					bottom: '5vh',
+				$intro.scrollex({
+					bottom: '10vh',
 					enter: function() {
 						$navPanelToggle.removeClass('alt');
 					},
