@@ -226,3 +226,38 @@ window.onbeforeunload = function () {
     });
   }
 })(jQuery);
+
+const videos = document.querySelectorAll('.video');
+
+videos.forEach(video => {
+  video.addEventListener('mouseenter', () => {
+    video.play();
+  });
+  
+  video.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+    video.load();
+  });
+});
+
+// Get all the buttons
+let buttons = document.querySelectorAll('.description-button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let description = button.parentElement.previousElementSibling;
+
+        if (description.style.opacity === "0" || description.style.opacity === "") {
+            description.style.opacity = "1";
+            description.style.maxHeight = description.scrollHeight + "px";
+            button.textContent = "Hide Description";
+            button.classList.add("active");
+        } else {
+            description.style.opacity = "0";
+            description.style.maxHeight = "0";
+            button.textContent = "Show Description";
+            button.classList.remove("active");
+        }
+    });
+})
