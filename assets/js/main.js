@@ -227,19 +227,23 @@ window.onbeforeunload = function () {
   }
 })(jQuery);
 
-const videos = document.querySelectorAll('.video');
 
-videos.forEach(video => {
-  video.addEventListener('mouseenter', () => {
+// Play videos on projects
+const videoContainers = document.querySelectorAll('.image.fit');
+
+videoContainers.forEach(container => {
+  const video = container.querySelector('.video');
+  
+  container.addEventListener('mouseenter', () => {
     video.play();
   });
   
-  video.addEventListener('mouseleave', () => {
+  container.addEventListener('mouseleave', () => {
     video.pause();
     video.currentTime = 0;
-    video.load();
   });
 });
+
 
 // Get all the buttons
 let buttons = document.querySelectorAll('.description-button');
